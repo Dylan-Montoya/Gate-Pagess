@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gate Pagess - Buscador Impulsado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header id="topHeader">
+    <nav class="nav-left">
+      <a href="#" id="homeReset">Inicio</a>
+      <a href="#" data-preset="Sazón">Sazón App</a>
+      <a href="#" data-preset="Universidades">Universidades</a>
+      <a href="#" data-preset="Programación web">Aprender Código</a>
+    </nav>
+    <div class="nav-right">
+      <div class="app-launcher" aria-label="Aplicaciones conectadas">
+        <a href="https://buho-45-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="app-link" title="Asistente IA Búho">🦉 Búho IA</a>
+        <a href="https://nimbo-cloud-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="app-link" title="Nube privada Nimbo">☁️ Nimbo</a>
+        <a href="https://nimbo-cloud-docs.lovable.app" target="_blank" rel="noopener noreferrer" class="app-link" title="Editor Nimbo Docs">📄 Nimbo Docs</a>
+      </div>
+      <button type="button" class="theme-btn" id="themeBtn">🌙 Modo Oscuro</button>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main id="mainApp">
+    <div class="brand-box">
+      <h1 class="logo" id="brandLogo">
+        <span class="highlight">Gate</span> Pagess
+      </h1>
+      <div class="powered-badge">
+        ⚡ Buscador impulsado por <strong>Google Search</strong>
+      </div>
+    </div>
+
+    <!-- Barra de Búsqueda e Impulso -->
+    <div class="search-container">
+      <form class="search-bar" id="searchForm">
+        <span class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        <input 
+          type="text" 
+          class="search-input" 
+          id="searchInput" 
+          placeholder="Escribe cualquier término para buscar en la web..." 
+          autocomplete="off"
+        >
+        <button type="button" class="clear-btn" id="clearBtn" title="Limpiar búsqueda">✕</button>
+        <button type="submit" class="search-submit">Buscar</button>
+      </form>
+
+      <!-- Modos de Búsqueda Impulsada -->
+      <div class="search-tabs" id="searchTabs">
+        <button type="button" class="tab-btn active" data-mode="all">🌐 Todo</button>
+        <button type="button" class="tab-btn" data-mode="web">🔎 Web Google</button>
+        <button type="button" class="tab-btn" data-mode="images">🖼️ Imágenes</button>
+        <button type="button" class="tab-btn" data-mode="videos">▶️ Videos</button>
+        <button type="button" class="tab-btn" data-mode="books">📚 Libros y Guías</button>
+      </div>
+
+      <!-- Suite Integrada: IA, Nube y Documentos -->
+      <div class="workspace-suite">
+        <div class="suite-label">Herramientas de Productividad e IA</div>
+        <div class="suite-grid">
+          <a href="https://buho-45-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="suite-card">
+            <span class="suite-card-title">🦉 Búho IA <span>↗</span></span>
+            <span class="suite-card-desc">Asistente bilingüe en español e inglés para organizar ideas.</span>
+          </a>
+          <a href="https://nimbo-cloud-pro.lovable.app" target="_blank" rel="noopener noreferrer" class="suite-card">
+            <span class="suite-card-title">☁️ Nimbo Cloud <span>↗</span></span>
+            <span class="suite-card-desc">Tu nube personal y privada para fotos, carpetas y archivos.</span>
+          </a>
+          <a href="https://nimbo-cloud-docs.lovable.app" target="_blank" rel="noopener noreferrer" class="suite-card">
+            <span class="suite-card-title">📄 Nimbo Docs <span>↗</span></span>
+            <span class="suite-card-desc">Editor de documentos con IA conectado a tu nube Nimbo.</span>
+          </a>
+        </div>
+
+        <!-- Búsquedas Rápidas -->
+        <div class="quick-suggestions">
+          <button type="button" class="suggestion-chip" data-preset="Búho IA">🦉 Búho IA</button>
+          <button type="button" class="suggestion-chip" data-preset="Nimbo nube">☁️ Nimbo Cloud</button>
+          <button type="button" class="suggestion-chip" data-preset="Nimbo Docs">📄 Nimbo Docs</button>
+          <button type="button" class="suggestion-chip" data-preset="Sazón nevera">🍳 App Sazón</button>
+          <button type="button" class="suggestion-chip" data-preset="Universidades ingeniería">🎓 Universidades</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resultados Dinámicos -->
+    <section class="results-area" id="resultsArea">
+      <div class="results-topbar">
+        <span id="statusText">Listo para buscar</span>
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" class="direct-google-btn" id="externalSearchBtn">
+          Ver todos los resultados en Google ↗
+        </a>
+      </div>
+      <div id="resultsList"></div>
+    </section>
+  </main>
+
+  <footer>
+    Gate Pagess © 2026 • Buscador web impulsado por Google
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
